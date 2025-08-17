@@ -216,7 +216,7 @@
 {
     // TODO: Shouldn't this be moved to JS, handled by queryRaw?
     FMResultSet *result = [_db queryRaw:@"select `value` from `local_storage` where `key` = ?" args:@[key] error:errorPtr];
-    
+
     if (!result) {
         return nil;
     }
@@ -252,9 +252,9 @@
 
 - (BOOL) isCached:(NSString *)table id:(NSString *)id
 {
-    if ([_cachedRecords[table] containsObject:id]) {
-        return YES;
-    }
+//     if ([_cachedRecords[table] containsObject:id]) {
+//         return YES;
+//     }
     return NO;
 }
 
